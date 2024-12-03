@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LeaderboardPanel : MonoBehaviour
+{
+    public List<Text> placesNumbers;
+    void Start()
+    {
+        Leaderboard.Reset();  
+    }
+
+    
+    void LateUpdate()
+    {
+        List<string> places = Leaderboard.GetPlaces(); 
+
+        for(int i = 0; i < placesNumbers.Count; i++)
+        {
+            if(i <places.Count)
+            {
+                placesNumbers[i].text = places[i]
+            }
+            else
+            {
+                placesNumbers[i]
+            }
+        }
+    }
+}
